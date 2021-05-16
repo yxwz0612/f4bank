@@ -1,0 +1,30 @@
+#tomcat 端口 http://localhost:8086/
+server:
+  port: 8080
+spring:
+  #通用的数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#   url: jdbc:mysql://121.4.17.149:3306/ccsql?useUnicode=true&characterEncoding=utf8&useSSL=FALSE&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://121.4.17.149:3306/ccsql?useUnicode=true&characterEncoding=utf8&useSSL=FALSE&serverTimezone=UTC
+    username: ccsql
+    password: q1w2e3r4
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  security:
+#    user:
+#      name: root  # 用户名
+#      password: 123  # 密码
+#      roles:
+#        - admin
+#        - user
+# jwt secret:密匙 和 duration:有效时长 单位毫秒
+Jwt:
+  secret: "!^_^!"
+  duration: 3600000
+# md5 盐值
+md5:
+  salt: jt,!**^$T
